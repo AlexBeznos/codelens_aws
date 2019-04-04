@@ -1,0 +1,12 @@
+service: serverless-aws
+provider:
+  name: aws
+
+functions:
+  hello_ruby:
+    runtime: ruby2.5
+    handler: ruby/handler.hello
+
+  hello_js:
+    runtime: nodejs8.10
+    handler: node/handler.hello
