@@ -1,0 +1,72 @@
+{
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 1,
+  "numPassedTests": 2,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 2,
+  "openHandles": [
+    
+  ],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [
+      
+    ],
+    "unmatched": 0,
+    "updated": 0
+  },
+  "startTime": 1554553342193,
+  "success": true,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            
+          ],
+          "failureMessages": [
+            
+          ],
+          "fullName": "adds 1 + 2 to equal 3",
+          "location": null,
+          "status": "passed",
+          "title": "adds 1 + 2 to equal 3"
+        },
+        {
+          "ancestorTitles": [
+            
+          ],
+          "failureMessages": [
+            
+          ],
+          "fullName": "adds 1 + 2 + 5 to equal 8",
+          "location": null,
+          "status": "passed",
+          "title": "adds 1 + 2 + 5 to equal 8"
+        }
+      ],
+      "endTime": 1554553343043,
+      "message": "",
+      "name": "\/private\/var\/folders\/h4\/ftdykysx4tg31qsjcw9df53w0000gn\/T\/jest\/index.test.js",
+      "startTime": 1554553342611,
+      "status": "passed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}
+

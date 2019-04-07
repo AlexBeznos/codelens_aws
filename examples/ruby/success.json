@@ -1,0 +1,43 @@
+{
+  "version": "3.8.0",
+  "examples": [
+    {
+      "id": ".\/rspec\/test_spec.rb[1:1]",
+      "description": "should eq 5",
+      "full_description": "#sum should eq 5",
+      "status": "passed",
+      "file_path": ".\/rspec\/test_spec.rb",
+      "line_number": 8,
+      "run_time": 0.000419,
+      "pending_message": null
+    },
+    {
+      "id": ".\/rspec\/test_spec.rb[1:2]",
+      "description": "should eq 9",
+      "full_description": "#sum should eq 9",
+      "status": "passed",
+      "file_path": ".\/rspec\/test_spec.rb",
+      "line_number": 9,
+      "run_time": 7.4e-5,
+      "pending_message": null
+    },
+    {
+      "id": ".\/rspec\/test_spec.rb[1:3]",
+      "description": "should eq 14",
+      "full_description": "#sum should eq 14",
+      "status": "passed",
+      "file_path": ".\/rspec\/test_spec.rb",
+      "line_number": 10,
+      "run_time": 4.2e-5,
+      "pending_message": null
+    }
+  ],
+  "summary": {
+    "duration": 0.001301,
+    "example_count": 3,
+    "failure_count": 0,
+    "pending_count": 0,
+    "errors_outside_of_examples_count": 0
+  },
+  "summary_line": "3 examples, 0 failures"
+}

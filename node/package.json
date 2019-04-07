@@ -1,0 +1,11 @@
+{
+  "name": "codelens",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jest": "^24.7.1",
+    "jest-cli": "^24.7.1",
+    "mkdirp-promise": "^5.0.1",
+    "rimraf": "^2.6.3"
+  }
+}

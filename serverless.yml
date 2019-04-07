@@ -3,10 +3,14 @@ provider:
   name: aws
 
 functions:
-  hello_ruby:
+  run_rspec:
     runtime: ruby2.5
-    handler: ruby/handler.hello
+    handler: ruby/handler.run
 
-  hello_js:
+  run_jest:
     runtime: nodejs8.10
-    handler: node/handler.hello
+    handler: node/handler.run
+    events:
+      - http:
+          path: jest
+          method: post

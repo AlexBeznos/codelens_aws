@@ -60,3 +60,6 @@ node_modules
 **/*.swn
 **/*.swp
 
+# remove ruby dependencies
+/ruby/vendor
+
