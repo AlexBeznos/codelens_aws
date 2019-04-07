@@ -5,7 +5,11 @@ provider:
 functions:
   run_rspec:
     runtime: ruby2.5
-    handler: ruby/handler.run
+    handler: ruby/rspec_tester.RspecTester.call
+    events:
+      - http:
+          path: rspec
+          method: post
 
   run_jest:
     runtime: nodejs8.10
