@@ -5,10 +5,10 @@ const path = require('path');
 const fs = require('fs');
 const promisify = require('util').promisify;
 const write = promisify(fs.writeFile);
-const read = promisify(fs.readFile);
 const mkDir = require('mkdirp-promise');
 const rmDir = require('rimraf').sync;
 const runCLI = require('jest-cli').runCLI;
+const getResult = require('./handleSuitResults');
 
 module.exports.run = async (event) => {
   const { body } = event;
@@ -30,7 +30,7 @@ module.exports.run = async (event) => {
   await write(jestFilePath, 'module.exports = { verbose: true };');
 
   await runCLI(jestConfig, [tempDir]);
-  const result = await read(resultFilePath);
+  const data = await getResult(resultFilePath);
 
   fs.unlinkSync(testFilePath);
   fs.unlinkSync(resultFilePath);
@@ -39,9 +39,7 @@ module.exports.run = async (event) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({
-      data: JSON.parse(result.toString('utf8'))
-    })
+    body: JSON.stringify({data})
   };
 };
 

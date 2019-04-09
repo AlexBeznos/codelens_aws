@@ -3,6 +3,7 @@ require 'rspec'
 require 'rspec/core/formatters/json_formatter'
 
 require_relative './rspec_temp'
+require_relative './rspec_result_formatter'
 
 class RspecTester
   class << self
@@ -19,11 +20,15 @@ class RspecTester
 
   def call
     file = prepare_file
-    result = run_tests(file.path)
+    run_result = run_tests(file.path)
+    result = RspecResultFormatter.call(run_result)
 
     file.flush
 
-    { statusCode: 200, body: result.to_json }
+    {
+      statusCode: 200,
+      body: { data: result }.to_json
+    }
   end
   
   private
@@ -67,8 +72,12 @@ end
 #test = <<~EOF
   #describe "#sum" do
     #it { expect(sum(2,3)).to eq 5 }
-    #it { expect(sum(2,3,4)).to eq 9 }
-    #it { expect(sum(2,3,4,5)).to eq 15 }
+    #xit { expect(sum(2,3,4)).to eq 9 }
+    #it { expect(sum(2,3,4,5)).to eq 14 }
   #end
 #EOF
-#RspecTester.call(event: { 'body' => { code: code, codeTest: test }.to_json}, context: '')
+#res = RspecTester.call(event: { 'body' => { code: code, codeTest: test }.to_json}, context: '')
+
+#p "\n"
+#p '_'*100
+#p res
